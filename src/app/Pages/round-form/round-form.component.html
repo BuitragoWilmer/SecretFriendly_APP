@@ -1,0 +1,17 @@
+@if (ResultsRounds$ | async; as resultObject) {
+    <h3>Escoge un grupo</h3>
+    <br>
+    <div class="listagf">
+      <ul class="groupFamily">
+        @for (item of resultObject; track item.description) {
+          <li>
+            <app-round-item [RoundInfo]="item" />
+          </li>
+        }
+        </ul>
+    </div>
+  }
+  <app-ronda-create (invocarPadre)="Actualizarlista()"></app-ronda-create>
+  @if (errorMessage) {
+    <app-error-message [errorMessage]="errorMessage" />
+  }

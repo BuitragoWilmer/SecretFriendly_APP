@@ -1,0 +1,40 @@
+
+  h3 {
+    text-align: center;
+    text-decoration: none;
+    font-family: 'Courier New', Courier, monospace;
+  }
+  
+  .listagf {
+    max-height: 11.25rem; /* 180px convertido a rem */
+    overflow-y: auto; /* Barra de desplazamiento vertical si es necesario */
+    scrollbar-width: thin; /* Para navegadores Gecko (Firefox) */
+    scrollbar-color: #888 transparent; /* Color del thumb y el track en Firefox */
+}
+
+.groupFamily {
+    list-style: none; /* Quita los números/puntos de la lista */
+    padding: 0; /* Elimina relleno */
+    margin-bottom: 0; /* Elimina el margen inferior */
+}
+
+/* Estilos personalizados para navegadores basados en Webkit (Chrome, Edge) */
+.listagf::-webkit-scrollbar {
+    width: 0.5rem; /* 8px convertido a rem */
+    height: 0.5rem; /* Opcional: altura de la barra en desplazamiento horizontal */
+}
+
+.listagf::-webkit-scrollbar-thumb {
+    background-color: #888; /* Color del scrollbar */
+    border-radius: 0.25rem; /* 4px convertido a rem */
+    border: 0.125rem solid transparent; /* 2px convertido a rem */
+    background-clip: padding-box; /* Para un efecto de borde interno */
+}
+
+.listagf::-webkit-scrollbar-thumb:hover {
+    background-color: #555; /* Color al pasar el cursor */
+}
+
+.listagf::-webkit-scrollbar-track {
+    background: transparent; /* Fondo de la pista del scrollbar */
+}

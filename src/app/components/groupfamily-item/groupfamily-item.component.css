@@ -1,0 +1,17 @@
+.pokemon-card {
+    display: inline-block;
+    max-width: 60%;
+    min-width: 250px;
+    background-color: #ffffffbd;
+    border-radius: 5px;
+    box-shadow: 1px 2px #000;
+    font-size: 1.0rem;
+    text-transform: capitalize;
+    margin-bottom: 10px;
+    text-decoration: none;
+    font-family: 'Courier New', Courier, monospace;
+    color: #000000da;
+    padding: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Animaciones */
+  }

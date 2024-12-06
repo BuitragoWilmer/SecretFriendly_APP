@@ -1,0 +1,24 @@
+
+@if (user!= null) 
+{
+    <div class="mensaje">
+        <p>Tu Id es <b class="fancy-highlight">{{user.id}}</b> y tu clave es <b class="fancy-highlight">{{user.keyUser}}</b> recuerdalo para poder saber tu amigo secreto</p>
+        <br>
+        <a class="btnAceptar" routerLink="/">Aceptar</a>
+        <br>
+    </div>
+}
+@else
+{
+    <div class="form-container">
+        <h3>Creacion del participante</h3>
+        <br>
+        <input type="text" [(ngModel)]="inputValue" name="inputField" placeholder="Ingresa tu nombre" required />
+        <textarea [(ngModel)]="inputGiftValue" 
+              name="inputGiftField" 
+              placeholder="Ingresa los regalos que deseas recibir" 
+              required>
+        </textarea>
+        <button class="btnCreate" (click)="crear()">Crear</button>
+    </div>
+}
